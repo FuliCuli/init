@@ -1,6 +1,6 @@
 ---
 
 - name: Install sails
-  npm: name=sails global=yes
+  npm: name=sails version=0.10.5 global=yes
   tags:
     - sails
