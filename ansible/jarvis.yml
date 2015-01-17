@@ -1,0 +1,11 @@
+---
+
+- name: Install webserver
+  hosts: webserver
+  user: vagrant
+  sudo: yes
+
+  roles:
+    - nodejs
+    - sails
+#    - { role: samba, when: "env == 'dev'" }

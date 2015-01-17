@@ -1,0 +1,6 @@
+---
+
+- name: Install sails
+  npm: name=sails global=yes
+  tags:
+    - sails
