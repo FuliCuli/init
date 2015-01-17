@@ -8,4 +8,4 @@
   roles:
     - nodejs
     - sails
-#    - { role: samba, when: "env == 'dev'" }
+    - { role: samba, when: "env == 'dev'" }
