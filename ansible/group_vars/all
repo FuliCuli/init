@@ -1,0 +1,15 @@
+---
+
+env: prod
+
+jarvis:
+    web:
+        domain: jarvis.com
+        git: "https://github.com/FuliCuli/jarvis-web.git"
+        ssl: true
+        user: "jarvis-web"
+    api:
+        domain: api.jarvis.com
+        git: "https://github.com/FuliCuli/jarvis-api.git"
+        ssl: true
+        user: "jarvis-api"

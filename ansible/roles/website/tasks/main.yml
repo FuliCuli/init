@@ -1,0 +1,18 @@
+---
+
+
+- include: init.yml
+
+- include: config.yml
+
+- include: install.yml
+
+- include: build.yml
+
+- include: release.yml
+
+- include: common.yml
+
+- include: cron.yml
+
+- include: right.yml

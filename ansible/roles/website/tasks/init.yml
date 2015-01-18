@@ -1,0 +1,45 @@
+---
+
+- name: Start new deployment
+  debug: msg="{{ current }}"
+  tags:
+    - website
+
+- name: Define variables for dev environment
+  set_fact: 
+    site_user: "vagrant"
+    site_group: "vagrant"
+  when: env == 'dev'
+  tags:
+    - website
+
+- name: Define variables for other environments
+  set_fact: 
+    site_user: "{{ current.user|default(website.user) }}"
+    site_group: "{{ current.group|default(website.group) }}"
+  when: env != 'dev'
+  tags:
+    - website
+
+- name: Define other variables
+  set_fact: 
+    site_version: "{{ current.version | default(website.version) }}"
+    site_release: "{{ current.release | default(website.release) }}"
+    site_directory_root: "{{ website.directory.website }}{{ current.domain }}"
+    site_directory_version: "{{ website.directory.website }}{{ current.domain }}/{{ current.version | default(website.version) }}"
+    site_protocol_use: "{{ website.protocol.standard }}"
+    site_protocol_redirect: "{{ website.protocol.ssl }}"
+    site_port_use: "{{ website.port.standard }}"
+    site_port_redirect: "{{ website.port.ssl }}"
+  tags:
+    - website
+
+- name: Define secure protocol
+  set_fact:
+    site_protocol_use: "{{ website.protocol.ssl }}"
+    site_protocol_redirect: "{{ website.protocol.standard }}"
+    site_port_use: "{{ website.port.ssl }}"
+    site_port_redirect: "{{ website.port.standard }}"
+  when: current.ssl is defined and current.ssl != false
+  tags:
+    - website

@@ -1,0 +1,7 @@
+---
+
+- name: Change release folder
+  file: src={{ site_directory_version }} dest={{ site_directory_root }}/{{ site_release }} owner={{ site_user }} group={{ site_group }} state=link
+  when: site_release != "false" and site_release != false
+  tags:
+    - website
