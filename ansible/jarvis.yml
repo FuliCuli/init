@@ -1,5 +1,7 @@
 ---
 
+- include: common.yml
+
 - name: Install webserver
   hosts: webserver
   user: vagrant

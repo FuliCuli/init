@@ -1,0 +1,8 @@
+---
+
+- name: Install server stuff
+  hosts: all
+  sudo: yes
+
+  roles:
+    - vim
