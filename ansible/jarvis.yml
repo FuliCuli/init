@@ -8,6 +8,7 @@
   roles:
     - nginx
     - nodejs
+    - bower
     - sails
     - { role: samba, when: "env == 'dev'" }
 
