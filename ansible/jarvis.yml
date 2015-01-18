@@ -10,3 +10,12 @@
     - nodejs
     - sails
     - { role: samba, when: "env == 'dev'" }
+
+- name: Install application
+  hosts: webserver
+  user: vagrant
+  sudo: yes
+
+  roles:
+    - { role: website, tags: ["web"], current: "{{ jarvis['web'] }}", name: "web" }
+# - { role: website, tags: ["api"], website: "{{ jarvis['api'] }}", name: "api" }
