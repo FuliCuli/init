@@ -1,5 +1,5 @@
 server {
-    listen {{ site_port_redirect }}{% if current.ssl == false %} ssl spdy{% endif %};
+    listen {{ site_port_redirect }}{% if current.ssl == false %} ssl{% endif %};
 
     server_name {{ current.domain }}{% if current.alternative_domain is defined %}{% for value in current.alternative_domain.items() %} {{ value }}{% endfor %}{% endif %};
     return 301 {{ site_protocol_use }}{{ current.domain }}$request_uri;
