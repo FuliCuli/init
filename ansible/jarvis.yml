@@ -12,6 +12,8 @@
     - nodejs
     - bower
     - grunt
+    - ruby
+    - compass
     - sails
     - { role: samba, when: "env == 'dev'" }
 

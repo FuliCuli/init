@@ -1,0 +1,6 @@
+---
+
+- name: Install compass
+  gem: name=compass state=present user_install=no
+  tags:
+    - compass
