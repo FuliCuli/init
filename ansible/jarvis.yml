@@ -11,6 +11,7 @@
     - nginx
     - nodejs
     - bower
+    - grunt
     - sails
     - { role: samba, when: "env == 'dev'" }
 
