@@ -47,7 +47,7 @@ server {
         set $version $http_x_version;
     }
 
-    root   {{ site_directory_root }}/$version;
+    root   {{ site_directory_root }}/$version/dist;
 
     charset utf-8;
 
