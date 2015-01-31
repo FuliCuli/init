@@ -29,4 +29,4 @@ Thumbs.db
 
 # Variables
 ansible/host_vars/*
-!ansible/host_vars/*.
+!ansible/host_vars/*.dist
