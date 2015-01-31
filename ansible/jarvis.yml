@@ -16,6 +16,7 @@
     - compass
     - sails
     - { role: samba, when: "env == 'dev'" }
+    - mongodb
 
 - name: Install application
   hosts: webserver

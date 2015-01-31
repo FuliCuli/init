@@ -1,0 +1,51 @@
+---
+
+- name: Import public key
+  apt_key: keyserver=keyserver.ubuntu.com id=7F0CEB10
+  tags:
+    - mongodb
+
+- name: Add source list
+  copy: src=mongodb.list dest=/etc/apt/sources.list.d/mongodb.list
+  tags:
+    - mongodb
+
+- name: Install mongodb-org
+  apt: name=mongodb-org state=latest update_cache=true
+  tags:
+    - mongodb
+
+- name: Install pymongo
+  pip: name=pymongo
+  tags:
+    - mongodb
+
+- name: Create admin user
+  mongodb_user:
+    user={{ mongodb_admin.username }}
+    password={{ mongodb_admin.password }}
+    database=admin
+    roles={{ mongodb_admin.roles | join(',') }}
+  changed_when: false
+  ignore_errors: true
+  when: mongodb_admin.username and mongodb_admin.password
+  tags:
+    - mongodb
+
+- name: Generate ~/.mongorc.js
+  template:
+    src=mongorc.js.j2
+    dest=~/.mongorc.js
+    mode=0644
+  when: mongodb_admin.username and mongodb_admin.password
+  tags:
+    - mongodb
+
+- name: Configure mongodb
+  template:
+    src=mongod.conf.j2
+    dest=/etc/mongod.conf
+    mode=0644
+  notify: restart mongodb
+  tags:
+    - mongodb
