@@ -1,0 +1,10 @@
+---
+
+- mongodb_user: 
+    database="{{ current.mongodb.dbname }}"
+    name="{{ current.mongodb.username }}"
+    password="{{ current.mongodb.password }}"
+    state=present
+  when: current.mongodb
+  tags:
+    - website

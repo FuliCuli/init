@@ -9,7 +9,11 @@ jarvis:
         ssl: true
         user: "jarvis-web"
     api:
-        domain: api.jarvis.com
+        domain: "api.jarvis.com"
         git: "https://github.com/FuliCuli/jarvis-api.git"
         ssl: true
         user: "jarvis-api"
+        mongodb:
+            dbname: "jarvis-api"
+            username: "jarvis"
+            password: 123456
