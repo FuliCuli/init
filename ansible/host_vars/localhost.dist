@@ -1,0 +1,7 @@
+---
+
+env: dev
+
+mongodb_admin:
+  username: root
+  password: 123456
