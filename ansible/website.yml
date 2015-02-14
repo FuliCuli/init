@@ -1,0 +1,9 @@
+---
+
+- name: Install application
+  hosts: web
+  sudo: yes
+
+  roles:
+    - { role: website, tags: ["web"], current: "{{ websites['web'] }}", name: "web" }
+    # - { role: website, tags: ["api"], current: "{{ websites['api'] }}", name: "api" }

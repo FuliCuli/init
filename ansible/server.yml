@@ -1,0 +1,23 @@
+---
+
+- include: common.yml
+
+- name: Install web servers
+  hosts: web
+  sudo: yes
+
+  roles:
+    - nginx
+    - nodejs
+    - bower
+    - grunt
+    - ruby
+    - compass
+    - sails
+
+- name: Install database servers
+  hosts: web
+  sudo: yes
+
+  roles:
+    - mongodb
