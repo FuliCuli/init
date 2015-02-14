@@ -2,18 +2,13 @@
 
 env: prod
 
-jarvis:
+websites:
     web:
-        domain: jarvis.com
-        git: "https://github.com/FuliCuli/jarvis-web.git"
+        domain: fuliculi.com
+        git: "https://github.com/FuliCuli/fuliculi.git"
         ssl: true
-        user: "jarvis-web"
-    api:
-        domain: "api.jarvis.com"
-        git: "https://github.com/FuliCuli/jarvis-api.git"
-        ssl: true
-        user: "jarvis-api"
+        user: "fuliculi"
         mongodb:
-            dbname: "jarvis-api"
-            username: "jarvis"
+            dbname: "fuliculi"
+            username: "fuliculi"
             password: 123456

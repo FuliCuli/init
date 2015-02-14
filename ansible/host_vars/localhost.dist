@@ -2,6 +2,14 @@
 
 env: dev
 
+jarvis:
+    web:
+        domain: fuliculi.dev
+        ssl: false
+#    api:
+#        domain: "api.fuliculi.dev"
+#        ssl: false
+
 mongodb_admin:
   username: root
   password: 123456
