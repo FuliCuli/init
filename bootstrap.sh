@@ -11,5 +11,7 @@ git submodule update --init --recursive
 make install
 cd ../
 rm -rf ansible/
-cd /home/ansible
-ansible-playbook -i hosts_dev jarvis.yml --connection=local
+cd /home/init
+git submodule update --init --recursive
+cd /home/init/ansible
+ansible-playbook -i dev server.yml --connection=local
