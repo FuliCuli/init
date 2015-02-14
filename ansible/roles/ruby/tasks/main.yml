@@ -1,6 +1,0 @@
----
-
-- name: Install ruby
-  apt: name=ruby-full state=present
-  tags:
-    - ruby

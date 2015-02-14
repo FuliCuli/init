@@ -1,8 +1,0 @@
-mongodb_admin:
-  username: null
-  password: null
-  roles:
-    - clusterAdmin
-    - readWriteAnyDatabase
-    - userAdminAnyDatabase
-    - dbAdminAnyDatabase
