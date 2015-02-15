@@ -16,4 +16,5 @@ cd /home/init
 git submodule init
 git submodule update --recursive
 cd /home/init/ansible
+cp host_vars/localhost.dist host_vars/localhost
 ansible-playbook -i dev server.yml --connection=local
