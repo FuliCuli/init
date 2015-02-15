@@ -1,6 +1,7 @@
 # init
 
 FuliCuli/init is base repository to generate a fully functional development environment.
+For now, it configures servers for node.js application but you can easily create your own playbooks to handle others types of need.
 
 Installation
 ------------
