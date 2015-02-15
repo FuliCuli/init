@@ -13,6 +13,7 @@ make install
 cd ../
 rm -rf ansible/
 cd /home/init
-git submodule update --init --recursive
+git submodule init
+git submodule update --recursive
 cd /home/init/ansible
 ansible-playbook -i dev server.yml --connection=local

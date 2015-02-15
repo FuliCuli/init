@@ -30,6 +30,3 @@ Thumbs.db
 # Variables
 ansible/host_vars/*
 !ansible/host_vars/*.dist
-
-# Ansible roles
-ansible/roles/
