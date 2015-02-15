@@ -60,7 +60,7 @@ Update
 #### Keep your fork up to date
 
 ```
-cd /home/init && git fetch upstream && git merge upstream/master && git submodules update
+git fetch upstream && git merge upstream/master && git submodule update
 ```
 
 You have to be aware that you can have conflicts, if so, then handle.
@@ -68,7 +68,7 @@ You have to be aware that you can have conflicts, if so, then handle.
 #### Update ansible/roles submodule
 
 ```
-cd /home/init && git submodule foreach git pull -q origin master
+git submodule foreach git pull -q origin master
 ```
 
 
