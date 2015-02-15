@@ -4,6 +4,7 @@ export PYTHONUNBUFFERED=1
 apt-get update
 apt-get install python-pip python-dev git -y
 pip install PyYAML jinja2 paramiko
+echo -e 'LANG=en_US.UTF-8\nLC_ALL=en_US.UTF-8' > /etc/default/locale
 cd /tmp
 git clone https://github.com/ansible/ansible.git
 cd ansible
