@@ -55,8 +55,10 @@ Update
 #### Keep your fork up to date
 
 ```
-cd /home/init && git pull upstream master && git submodules update
+cd /home/init && git fetch upstream && git merge upstream/master && git submodules update
 ```
+
+You have to be aware that you can have conflicts, if so, then handle.
 
 #### Update ansible/roles submodule
 
