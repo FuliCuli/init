@@ -42,7 +42,7 @@ For the dev environment, you can customize with the file [ansible/host_vars/loca
 
 #### Launch configuration
 
-One connect under ssh to your VM, launch the command :
+Once connect under ssh to your VM, launch the command :
 ```
 cd /home/init && ansible-playbook -i dev website.yml -t web --connection=local
 ```
