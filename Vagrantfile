@@ -39,6 +39,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "./", "/home/init", type: "nfs"
   config.vm.synced_folder "../", "/var/www", type: "nfs"
   config.vm.synced_folder "~/.ssh", "/root/.ssh", mount_options: ["dmode=700", "fmode=600"], owner: "root", group: "root"
+  config.vm.synced_folder "~/.ssh", "/home/vagrant/.ssh", mount_options: ["dmode=700", "fmode=600"], owner: "vagrant", group: "vagrant"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
